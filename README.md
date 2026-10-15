@@ -23,7 +23,7 @@
 <a href="https://wa.me/message/S5YJFU55YB3VD1"><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-Message-171717?style=for-the-badge&logo=whatsapp&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
 <a href="https://x.com/mkp_digital"><img alt="X" src="https://img.shields.io/badge/X-%40mkp_digital-171717?style=for-the-badge&logo=x&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
 <a href="https://huggingface.co/Ciroc0"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-Ciroc0-171717?style=for-the-badge&logo=huggingface&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
-<a href="https://buymeacoffee.com/ciroc0"><img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-171717?style=for-the-badge&logo=buymeacoffee&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
+<a href="https://buymeacoffee.com/mkp_digital"><img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-171717?style=for-the-badge&logo=buymeacoffee&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
 <a href="https://github.com/Ciroc0"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Ciroc0-171717?style=for-the-badge&logo=github&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
 <a href="tel:+4529867747"><img alt="Call" src="https://img.shields.io/badge/Call-%2B45%2029%2086%2077%2047-171717?style=for-the-badge&logo=phone&logoColor=EDF50B&labelColor=171717&color=252725" /></a>
 
