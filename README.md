@@ -7,7 +7,7 @@
 <div align="center">
 
 <a href="https://www.mkpdigital.dk/">
-  <img src="./assets/hero.svg" alt="Mathias Pedersen — Founder of MKP Digital, full-stack developer and IT infrastructure consultant" width="100%" />
+  <img src="./assets/hero.svg" alt="Mathias Pedersen - Founder of MKP Digital, full-stack developer and IT infrastructure consultant" width="100%" />
 </a>
 
 <br />
@@ -159,7 +159,7 @@ Real projects across commercial delivery, independent products, infrastructure a
 
 Have a business challenge, a product idea, an infrastructure problem or an integration that needs to work reliably?
 
-**[Tell me what you need through MKP Digital](https://www.mkpdigital.dk/kontakt)** — you'll be talking directly to the person who designs, builds, deploys and supports the solution.
+**[Tell me what you need through MKP Digital](https://www.mkpdigital.dk/kontakt)** - you'll be talking directly to the person who designs, builds, deploys and supports the solution.
 
 <div align="center">
 
@@ -168,7 +168,7 @@ Have a business challenge, a product idea, an infrastructure problem or an integ
 
 <br /><br />
 
-<a href="https://www.mkpdigital.dk/"><img src="./assets/footer.svg" width="100%" alt="MKP Digital — Useful software, reliable infrastructure, real-world results"/></a>
+<a href="https://www.mkpdigital.dk/"><img src="./assets/footer.svg" width="100%" alt="MKP Digital - Useful software, reliable infrastructure, real-world results"/></a>
 
 <br />
 
