@@ -25,6 +25,39 @@ jobs:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
+      - name: Inspect public contribution calendar
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re, urllib.request, html.parser
+          class Grid(html.parser.HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.cells = []
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if a.get("data-date") and a.get("data-level"):
+                      self.cells.append((a["data-date"], int(a["data-level"])))
+          req = urllib.request.Request(
+              "https://github.com/users/Ciroc0/contributions",
+              headers={"User-Agent":"Mozilla/5.0","Accept":"text/html"}
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=25) as response:
+                  body = response.read().decode("utf8")
+                  status = response.status
+              g = Grid()
+              g.feed(body)
+              sample = re.search(r"([0-9,]+) contributions? in the last year", body, re.I)
+              print("Public calendar HTTP status:", status, "bytes:",len(body))
+              print("Contribution grid date cells:", len(g.cells))
+              print("Active contribution days:", sum(v>0 for _,v in g.cells))
+              print("Calendar summary:", sample.group(0) if sample else "not found")
+              print("Earliest and latest:",g.cells[:1],g.cells[-1:])
+          except Exception as error:
+              print("Public calendar fetch failed:",type(error).__name__,str(error))
+          PY
+
       - name: Generate branded contribution animation
         uses: Platane/snk/svg-only@v3
         with:
