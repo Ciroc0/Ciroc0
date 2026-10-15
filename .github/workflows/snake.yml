@@ -25,6 +25,49 @@ jobs:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
+      - name: Verify public contribution calendar
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import html.parser
+          import os
+          import urllib.request
+
+          class Calendar(html.parser.HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.days = []
+              def handle_starttag(self, tag, attrs):
+                  attributes = dict(attrs)
+                  if "data-date" in attributes and "data-level" in attributes:
+                      self.days.append((attributes["data-date"], int(attributes["data-level"])))
+
+          url = "https://github.com/users/Ciroc0/contributions"
+          request = urllib.request.Request(url, headers={
+              "User-Agent": "Mozilla/5.0",
+              "Accept": "text/html",
+              "Cache-Control": "no-cache",
+          })
+          with urllib.request.urlopen(request, timeout=30) as response:
+              html = response.read().decode("utf-8")
+
+          calendar = Calendar()
+          calendar.feed(html)
+          days = len(calendar.days)
+          active = sum(level > 0 for _, level in calendar.days)
+          print(f"GitHub public contribution calendar: {days} days, {active} active days")
+          if days < 360:
+              raise SystemExit("Incomplete contribution calendar; refusing to overwrite the animation.")
+          if active < 50:
+              print("::warning::Public contribution calendar has fewer than 50 active days. Check that private contributions are visible to the public.")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write(f"### GitHub contribution source\\n\\n")
+              summary.write(f"- Days inspected: **{days}**\\n")
+              summary.write(f"- Days showing contributions: **{active}**\\n")
+              summary.write("- Source: publicly visible GitHub profile contributions, including anonymized private contributions if enabled.\\n")
+          PY
+
       - name: Generate branded contribution animation
         uses: Platane/snk/svg-only@v3
         with:
