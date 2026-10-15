@@ -7,6 +7,6 @@
 <text x="25" y="147" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#EDF50B" font-weight="700" >PS C:\MKP\SYSTEM&gt;</text><text x="232" y="147" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#FFFFFF" font-weight="600" >get-focus</text>
 <text x="25" y="179" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#B7B9BC" font-weight="400" >reliable systems  ·  production-ready applications  ·  practical solutions</text>
 <text x="25" y="219" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#EDF50B" font-weight="700" >PS C:\MKP\SYSTEM&gt;</text>
-<rect x="232" y="202" width="10" height="21" rx="0" fill="#EDF50B" stroke="none"/><animate href="#none" attributeName="opacity" values="1;1" dur="1s"/>
+<rect x="232" y="202" width="10" height="21" rx="0" fill="#EDF50B" stroke="none"><animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/></rect>
 <text x="1120" y="220" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#B7B9BC" font-weight="600" >v2026</text>
 </svg>
